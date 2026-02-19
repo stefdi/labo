@@ -1,0 +1,91 @@
+body {
+  background: #1abc9c;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 30px 0;
+}
+
+.header img {
+  display: block;
+  width: 318px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.archive {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* один пост */
+.one-post {
+  margin-bottom: 45px;
+}
+
+.post-title {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  font-family: "Times New Roman", serif;
+  font-weight: normal;
+}
+
+.post-title a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* строка автор + дата */
+.article-info {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+
+.article-author {
+  width: 50%;
+  float: left;
+}
+
+.article-created-date {
+  width: 50%;
+  float: right;
+  text-align: right;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* важно: чтобы следующий текст не "поднимался" под float */
+.article-text {
+  clear: both;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* страница одной статьи: ссылка "Все статьи" справа */
+.article-top-link {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.article-top-link a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+}
+.top-link {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.top-link a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+}
