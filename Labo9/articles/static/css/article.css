@@ -1,0 +1,200 @@
+body {
+  background: #1abc9c;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 30px 0;
+}
+
+.header img {
+  display: block;
+  width: 318px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.archive {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* один пост */
+.one-post {
+  margin-bottom: 45px;
+}
+
+.post-title {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  font-family: "Times New Roman", serif;
+  font-weight: normal;
+}
+
+.post-title a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* строка автор + дата */
+.article-info {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+
+.article-author {
+  width: 50%;
+  float: left;
+}
+
+.article-created-date {
+  width: 50%;
+  float: right;
+  text-align: right;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* важно: чтобы следующий текст не "поднимался" под float */
+.article-text {
+  clear: both;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* страница одной статьи: ссылка "Все статьи" справа */
+.article-top-link {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.article-top-link a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+}
+.top-link {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.top-link a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+}
+.one-post.folded .article-author {
+  display: none;
+}
+
+.one-post.folded .article-created-date {
+  display: none;
+}
+
+.one-post.folded .article-text {
+  display: none;
+}
+.one-post.folded .article-author,
+.one-post.folded .article-created-date,
+.one-post.folded .article-text {
+  display: none;
+}
+.one-post {
+  position: relative;
+}
+
+.one-post-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  z-index: -1;
+  opacity: 0;
+}
+
+.header {
+  position: relative;
+  padding: 30px;
+}
+
+.logo {
+  display: block;
+  width: 318px;
+}
+
+.header-text-area {
+  float: left;
+  width: 420px;
+  margin-top: 30px;
+}
+
+.service-title {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.register-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+.icons-for-parallax {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  height: 530px;
+  position: relative;
+  float: right;
+  width: 260px;
+}
+
+.icons-for-parallax img {
+  position: absolute;
+  top: 0;
+}
+
+.icon-for-parallax-first {
+  width: 200px;
+  margin-top: 200px;
+  z-index: 3;
+}
+
+.icon-for-parallax-second {
+  width: 175px;
+  margin-top: 100px;
+  margin-left: 80px;
+  z-index: 2;
+}
+
+.icon-for-parallax-third {
+  width: 150px;
+  margin-left: 160px;
+  z-index: 1;
+}
+
+/* очистка float после шапки */
+.header:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body {
+  background: #1abc9c;
+  color: #ffffff;
+}
+
+.archive {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 6px;
+}
