@@ -1,133 +1,33 @@
 body {
+  margin: 0;
   background: #1abc9c;
   font-family: Tahoma, Arial, sans-serif;
-  color: #ffffff;
-  margin: 0;
-  padding: 30px 0;
+  color: #0b4f4a; 
 }
 
-.header img {
-  display: block;
-  width: 318px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-}
-
-.archive {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* один пост */
-.one-post {
-  margin-bottom: 45px;
-}
-
-.post-title {
-  margin: 0 0 6px 0;
-  font-size: 20px;
-  font-family: "Times New Roman", serif;
-  font-weight: normal;
-}
-
-.post-title a {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-/* строка автор + дата */
-.article-info {
-  margin-bottom: 6px;
-  font-size: 14px;
-  font-weight: normal;
-}
-
-
-.article-author {
-  width: 50%;
-  float: left;
-}
-
-.article-created-date {
-  width: 50%;
-  float: right;
-  text-align: right;
-  font-weight: normal;
-  font-style: italic;
-}
-
-/* важно: чтобы следующий текст не "поднимался" под float */
-.article-text {
-  clear: both;
-  font-size: 14px;
-  line-height: 1.4;
-  margin: 0;
-}
-
-
-/* страница одной статьи: ссылка "Все статьи" справа */
-.article-top-link {
-  text-align: right;
-  margin-bottom: 20px;
-}
-
-.article-top-link a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
-}
-.top-link {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-}
-
-.top-link a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
-}
-.one-post.folded .article-author {
-  display: none;
-}
-
-.one-post.folded .article-created-date {
-  display: none;
-}
-
-.one-post.folded .article-text {
-  display: none;
-}
-.one-post.folded .article-author,
-.one-post.folded .article-created-date,
-.one-post.folded .article-text {
-  display: none;
-}
-.one-post {
-  position: relative;
-}
-
-.one-post-shadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: black;
-  z-index: -1;
-  opacity: 0;
-}
-
+/* ================= ШАПКА ================= */
 .header {
-  position: relative;
-  padding: 30px;
+  background: #d4efec;
+  padding: 35px 0;
+  width: 100%;
 }
 
-.logo {
+/* Центрируем содержимое шапки по ширине статей */
+.header-container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+.header-container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.header .logo {
   display: block;
   width: 318px;
+  margin: 0 auto 25px auto;
 }
 
 .header-text-area {
@@ -137,64 +37,110 @@ body {
 }
 
 .service-title {
-  margin: 0 0 10px 0;
-  font-size: 28px;
+  margin: 0 0 20px 0;
+  font-size: 38px;
   font-weight: 700;
+  color: #0b4f4a;
 }
 
 .register-link {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
-  margin-right: 15px;
+  margin-right: 40px;
+  color: #1abc9c;
+  font-size: 22px;
+  text-decoration: underline;
 }
 
 .icons-for-parallax {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  height: 530px;
-  position: relative;
   float: right;
   width: 260px;
+  position: relative;
+  height: 200px;
 }
+.icons-for-parallax img { position: absolute; top: 0; }
+.icon-for-parallax-first { width: 200px; margin-top: 90px; right: 0; z-index: 3; }
+.icon-for-parallax-second { width: 175px; margin-top: 45px; right: 40px; z-index: 2; }
+.icon-for-parallax-third { width: 150px; margin-top: 0; right: 80px; z-index: 1; }
 
-.icons-for-parallax img {
-  position: absolute;
-  top: 0;
-}
-
-.icon-for-parallax-first {
-  width: 200px;
-  margin-top: 200px;
-  z-index: 3;
-}
-
-.icon-for-parallax-second {
-  width: 175px;
-  margin-top: 100px;
-  margin-left: 80px;
-  z-index: 2;
-}
-
-.icon-for-parallax-third {
-  width: 150px;
-  margin-left: 160px;
-  z-index: 1;
-}
-
-/* очистка float после шапки */
-.header:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-body {
-  background: #1abc9c;
-  color: #ffffff;
-}
-
+/* ================= БЛОК СТАТЕЙ ================= */
 .archive {
-  background: rgba(0, 0, 0, 0.2);
+  width: 960px;
+  margin: 0 auto;
+  background: #9fe0d9; 
   padding: 30px;
-  border-radius: 6px;
+  box-sizing: border-box;
+  color: #0b4f4a;
+}
+
+.article-top-link { 
+  text-align: right; 
+  margin-bottom: 20px; 
+}
+.article-top-link a { 
+  color: #ffffff; 
+  text-decoration: none; 
+  font-weight: 700; 
+  font-size: 16px;
+}
+
+/* ================= ОДИН ПОСТ ================= */
+.one-post {
+  margin-bottom: 0; 
+  padding: 25px 20px; /* Внутренние отступы для красоты фона */
+  border-bottom: 1px solid #7dbcb4; /* Линия-разделитель */
+  position: relative;
+  transition: background-color 0.2s;
+}
+.one-post:last-child {
+  border-bottom: none; /* Убираем линию у последней статьи */
+}
+
+.post-title {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+}
+.post-title a {
+  color: #0b4f4a;
+  text-decoration: underline;
+}
+
+/* Кнопка "свернуть" */
+.fold-button {
+  float: right; 
+  font-size: 14px; 
+  font-weight: bold; 
+  color: #0b4f4a;
+  text-decoration: none;
+  font-family: Tahoma, Arial, sans-serif;
+  margin-top: 5px;
+}
+
+.article-info {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.article-info:after {
+  content: ""; display: block; clear: both;
+}
+.article-author { width: 50%; float: left; font-weight: bold; }
+.article-created-date { width: 50%; float: right; text-align: right; font-style: italic; }
+
+.article-text {
+  clear: both;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ================= ЭФФЕКТ НАВЕДЕНИЯ ================= */
+.one-post:hover {
+  background-color: #0b4f4a; 
+}
+.one-post:hover .post-title a,
+.one-post:hover .article-author,
+.one-post:hover .article-created-date,
+.one-post:hover .article-text,
+.one-post:hover .fold-button {
+  color: #ffffff; 
 }
